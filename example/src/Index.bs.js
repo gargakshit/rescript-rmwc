@@ -8,6 +8,7 @@ import * as App$RescriptRmwcExample from "./App.bs.js";
 import "./index.css";
 import "@rmwc/button/styles";
 import "@rmwc/card/styles";
+import "@rmwc/typography/styles";
 ;
 
 var root = document.querySelector("#root");
