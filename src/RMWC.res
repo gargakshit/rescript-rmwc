@@ -106,6 +106,15 @@ module RMWC = {
     ) => React.element = "CardActionButton"
   }
 
+  module Typography = {
+    @module("@rmwc/typgraphy") @react.component
+    external make: (
+      ~children: option<React.element>=?,
+      ~use: string,
+      ~style: option<ReactDOM.style>=?,
+    ) => React.element = "Typography"
+  }
+
   // module Dialog = {
   //   @module("@rmwc/dialog") external onCloseEvent: 'whatever = "DialogOnCloseEventT"
 

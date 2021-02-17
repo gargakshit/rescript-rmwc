@@ -344,6 +344,16 @@
   resolved "https://registry.yarnpkg.com/@rmwc/types/-/types-6.0.5.tgz#2b388d9a1512f06b43d78a1c364299c663e01061"
   integrity sha512-G4NZxakwsTMFxxpEWX90MOlZtVNzCwooLUg7FH7Oh5OJCnKWGmXK8ZMF59vvIEn7zCiEpVroKhOxNpMw9TIUTw==
 
+"@rmwc/typography@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/typography/-/typography-6.1.4.tgz#81477ad4b69ec3518d489ce8f009c72d745e5971"
+  integrity sha512-X8Fez+AQEBzLwFijNlhSHPUGgCnbaPkcwJCQ4grAxBPIo4c7M9VA6/XvFTrcHntNbY/x2RSHNQCPdZCUdz2tyw==
+  dependencies:
+    "@material/typography" "^5.1.0"
+    "@rmwc/base" "^6.1.4"
+    "@rmwc/provider" "^6.1.4"
+    "@rmwc/types" "^6.0.5"
+
 "@types/classnames@^2.2.7":
   version "2.2.11"
   resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.11.tgz#2521cc86f69d15c5b90664e4829d84566052c1cf"
