@@ -1,5 +1,5 @@
 {
-  "name": "rescript-project-template",
+  "name": "rescript-rmwc",
   "version": "0.0.1",
   "scripts": {
     "build": "bsb -make-world",
@@ -12,6 +12,14 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "*"
+    "bs-platform": "^9.0.1",
+    "gentype": "^3.44.0"
+  },
+  "dependencies": {
+    "@rescript/react": "^0.10.1",
+    "@rmwc/base": "^6.1.4",
+    "@rmwc/button": "^6.1.4",
+    "@rmwc/card": "^6.1.4",
+    "@rmwc/dialog": "^6.1.4"
   }
 }
