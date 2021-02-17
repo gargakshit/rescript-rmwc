@@ -107,11 +107,13 @@ module RMWC = {
   }
 
   module Typography = {
-    @module("@rmwc/typgraphy") @react.component
+    @module("@rmwc/typography") @react.component
     external make: (
       ~children: option<React.element>=?,
       ~use: string,
       ~style: option<ReactDOM.style>=?,
+      ~tag: option<string>=?,
+      ~theme: option<string>=?,
     ) => React.element = "Typography"
   }
 

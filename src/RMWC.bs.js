@@ -21,6 +21,8 @@ var CardActionIcons = {};
 
 var CardActionButton = {};
 
+var Typography = {};
+
 var RMWC = {
   Portal: Portal,
   Button: Button,
@@ -31,7 +33,8 @@ var RMWC = {
   CardActions: CardActions,
   CardActionButtons: CardActionButtons,
   CardActionIcons: CardActionIcons,
-  CardActionButton: CardActionButton
+  CardActionButton: CardActionButton,
+  Typography: Typography
 };
 
 export {
