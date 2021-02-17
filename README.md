@@ -1,21 +1,33 @@
-# ReScript Project Template
+# rescript-rmwc
 
-The only official ReScript starter template.
+WIP bindings to [RMWC](https://rmwc.io) for ReScript.
 
-## Installation
+### Components Implemented
 
-```sh
-npm install
-```
+- Button
+- Card
+- Typography
 
-## Build
+Note: Icons are still missing
 
-- Build: `npm run build`
-- Clean: `npm run clean`
-- Build & watch: `npm run start`
+### How to use
 
-## Run
+- Install this lib via npm/yarn
+- Add `rescript-rmwc` to `bsconfig.json` like `"bs-dependencies": ["...", "rescript-rmwc"]`
 
-```sh
-node src/Demo.bs.js
-```
+### Example
+
+An example is there in the (example)(./example) directory.
+
+To run the example
+
+- Clone this repo
+- Run `yarn install`
+- `cd example`
+- `yarn install`
+- `yarn start:res`
+- And in another terminal in the example directory, `yarn start`
+
+### Screenshot
+
+![card](./screenshots/card.png)
