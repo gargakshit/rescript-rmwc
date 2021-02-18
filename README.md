@@ -35,4 +35,4 @@ To run the example
 
 ### Screenshot
 
-![screenshot](./screenshots/screenshot_new.png)
+![screenshot](./screenshots/screenshot_new.PNG)
