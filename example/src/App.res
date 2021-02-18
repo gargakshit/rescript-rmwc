@@ -13,20 +13,20 @@ let make = () => {
   let (name, setName) = React.useState(_ => "")
 
   <>
-    <RMWC.Portal />
-    <RMWC.Dialog
+    <Portal />
+    <Dialog
       \"open"={dialogOpen}
       renderToPortal={true}
       onClose={_ => {
         setName(_ => "")
         setDialogOpen(_ => false)
       }}>
-      <RMWC.DialogTitle> {"Hello"->React.string} </RMWC.DialogTitle>
-      <RMWC.DialogContent> {("Nice to meet you, " ++ name)->React.string} </RMWC.DialogContent>
-      <RMWC.DialogActions>
-        <RMWC.DialogButton action="close"> {"OK"->React.string} </RMWC.DialogButton>
-      </RMWC.DialogActions>
-    </RMWC.Dialog>
+      <DialogTitle> {"Hello"->React.string} </DialogTitle>
+      <DialogContent> {("Nice to meet you, " ++ name)->React.string} </DialogContent>
+      <DialogActions>
+        <DialogButton action="close"> {"OK"->React.string} </DialogButton>
+      </DialogActions>
+    </Dialog>
     <div
       style={ReactDOM.Style.make(
         ~display="flex",
@@ -35,76 +35,65 @@ let make = () => {
         ~height="100vh",
         (),
       )}>
-      <RMWC.Card style={ReactDOM.Style.make(~width="21rem", ())} outlined={true}>
-        <RMWC.CardPrimaryAction>
-          <RMWC.CardMedia
+      <Card style={ReactDOM.Style.make(~width="21rem", ())} outlined={true}>
+        <CardPrimaryAction>
+          <CardMedia
             sixteenByNine={true}
             style={ReactDOM.Style.make(~backgroundImage="url(" ++ imageUrl ++ ")", ())}
           />
           <div style={ReactDOM.Style.make(~padding="0 1rem 1rem 1rem", ())}>
-            <RMWC.Typography use="headline6" tag="h2">
-              {"Lorem Ipsum"->React.string}
-            </RMWC.Typography>
-            <RMWC.Typography
+            <Typography use="headline6" tag="h2"> {"Lorem Ipsum"->React.string} </Typography>
+            <Typography
               use="subtitle2"
               tag="h3"
               theme="textSecondaryOnBackground"
               style={ReactDOM.Style.make(~marginTop="-1rem", ())}>
               {"By John Doe"->React.string}
-            </RMWC.Typography>
-            <RMWC.Typography use="body1" tag="div" theme="textSecondaryOnBackground">
+            </Typography>
+            <Typography use="body1" tag="div" theme="textSecondaryOnBackground">
               {"Visit ten places on our planet that are undergoing the biggest changes today."->React.string}
-            </RMWC.Typography>
+            </Typography>
           </div>
-        </RMWC.CardPrimaryAction>
-        <RMWC.CardActions>
-          <RMWC.CardActionButtons>
-            <RMWC.CardActionButton> {"Read"->React.string} </RMWC.CardActionButton>
-            <RMWC.CardActionButton> {"Bookmark"->React.string} </RMWC.CardActionButton>
-          </RMWC.CardActionButtons>
-          <RMWC.CardActionIcons>
-            <RMWC.CardActionIcon
+        </CardPrimaryAction>
+        <CardActions>
+          <CardActionButtons>
+            <CardActionButton> {"Read"->React.string} </CardActionButton>
+            <CardActionButton> {"Bookmark"->React.string} </CardActionButton>
+          </CardActionButtons>
+          <CardActionIcons>
+            <CardActionIcon
               onClick={() => setLiked(v => !v)}
-              icon={<RMWC.Tooltip content={(liked ? "Unlike" : "Like")->React.string}>
-                <RMWC.Icon icon={liked ? "favorite" : "favorite_border"} />
-              </RMWC.Tooltip>}
+              icon={<Tooltip content={(liked ? "Unlike" : "Like")->React.string}>
+                <Icon icon={liked ? "favorite" : "favorite_border"} />
+              </Tooltip>}
             />
-            <RMWC.CardActionIcon
-              icon={<RMWC.Tooltip content={"Share"->React.string}>
-                <RMWC.Icon icon="share" />
-              </RMWC.Tooltip>}
+            <CardActionIcon
+              icon={<Tooltip content={"Share"->React.string}> <Icon icon="share" /> </Tooltip>}
             />
-            <RMWC.CardActionIcon
-              icon={<RMWC.Tooltip content={"More Actions"->React.string}>
-                <RMWC.Icon icon="more_vert" />
-              </RMWC.Tooltip>}
+            <CardActionIcon
+              icon={<Tooltip content={"More Actions"->React.string}>
+                <Icon icon="more_vert" />
+              </Tooltip>}
             />
-          </RMWC.CardActionIcons>
-        </RMWC.CardActions>
-      </RMWC.Card>
-      <RMWC.Card
-        style={ReactDOM.Style.make(~marginLeft="2rem", ~width="21rem", ())} outlined={true}>
+          </CardActionIcons>
+        </CardActions>
+      </Card>
+      <Card style={ReactDOM.Style.make(~marginLeft="2rem", ~width="21rem", ())} outlined={true}>
         <div style={ReactDOM.Style.make(~padding="0rem 1rem", ())}>
-          <RMWC.Typography tag="h3" use="heading3">
-            {"Progress Indicators"->React.string}
-          </RMWC.Typography>
-          <RMWC.Typography tag="span" use="caption">
-            {"Intermediate"->React.string}
-          </RMWC.Typography>
-          <RMWC.LinearProgress />
+          <Typography tag="h3" use="heading3"> {"Progress Indicators"->React.string} </Typography>
+          <Typography tag="span" use="caption"> {"Intermediate"->React.string} </Typography>
+          <LinearProgress />
           <div style={ReactDOM.Style.make(~marginTop="12px", ())} />
-          <RMWC.Typography tag="span" use="caption"> {"Default"->React.string} </RMWC.Typography>
-          <RMWC.LinearProgress progress={0.6} />
+          <Typography tag="span" use="caption"> {"Default"->React.string} </Typography>
+          <LinearProgress progress={0.6} />
           <div style={ReactDOM.Style.make(~marginTop="12px", ())} />
-          <RMWC.Typography tag="span" use="caption"> {"Buffered"->React.string} </RMWC.Typography>
-          <RMWC.LinearProgress progress={0.4} buffer={0.5} />
+          <Typography tag="span" use="caption"> {"Buffered"->React.string} </Typography>
+          <LinearProgress progress={0.4} buffer={0.5} />
           <div style={ReactDOM.Style.make(~marginTop="12px", ())} />
-          <RMWC.Typography tag="span" use="caption"> {"Reversed"->React.string} </RMWC.Typography>
-          <RMWC.LinearProgress progress={0.2} reversed={true} />
+          <Typography tag="span" use="caption"> {"Reversed"->React.string} </Typography>
+          <LinearProgress progress={0.2} reversed={true} />
           <div style={ReactDOM.Style.make(~marginTop="12px", ())} />
-          <RMWC.Typography tag="span" use="caption">
-            {"Circular Progress"->React.string}
-          </RMWC.Typography>
+          <Typography tag="span" use="caption"> {"Circular Progress"->React.string} </Typography>
           <div
             style={ReactDOM.Style.make(
               ~display="flex",
@@ -113,16 +102,16 @@ let make = () => {
               ~justifyContent="space-between",
               (),
             )}>
-            <RMWC.CircularProgress />
-            <RMWC.CircularProgress progress={0.6} />
-            <RMWC.Button disabled={true} outlined={true} icon={<RMWC.CircularProgress />}>
+            <CircularProgress />
+            <CircularProgress progress={0.6} />
+            <Button disabled={true} outlined={true} icon={<CircularProgress />}>
               {"Loading Button"->React.string}
-            </RMWC.Button>
+            </Button>
           </div>
           <div style={ReactDOM.Style.make(~marginTop="16px", ())} />
         </div>
-      </RMWC.Card>
-      <RMWC.Card style={ReactDOM.Style.make(~marginLeft="2rem", ())} outlined={true}>
+      </Card>
+      <Card style={ReactDOM.Style.make(~marginLeft="2rem", ())} outlined={true}>
         <div
           style={ReactDOM.Style.make(
             ~padding="1rem",
@@ -130,41 +119,41 @@ let make = () => {
             ~flexDirection="column",
             (),
           )}>
-          <RMWC.TextField
+          <TextField
             outlined={true}
             label={"Enter your name"->React.string}
             value={name}
             onChange={e => setName(ReactEvent.Form.currentTarget(e)["value"])}
           />
           <div style={ReactDOM.Style.make(~marginTop="16px", ())} />
-          <RMWC.Button
+          <Button
             raised={true}
-            icon={<RMWC.Icon icon="chat" />}
+            icon={<Icon icon="chat" />}
             onClick={() => {
               setDialogOpen(_ => true)
             }}>
             {"Greet"->React.string}
-          </RMWC.Button>
+          </Button>
         </div>
-      </RMWC.Card>
-      <RMWC.Card style={ReactDOM.Style.make(~marginLeft="2rem", ())} outlined={true}>
+      </Card>
+      <Card style={ReactDOM.Style.make(~marginLeft="2rem", ())} outlined={true}>
         <div style={ReactDOM.Style.make(~padding="0.5rem 1rem", ())}>
-          <RMWC.AvatarGroup dense={true}>
-            <RMWC.Tooltip content={"Jane Doe"->React.string}>
-              <RMWC.Avatar src={avatar1Url} size="large" interactive={true} />
-            </RMWC.Tooltip>
-            <RMWC.Tooltip content={"John Doe"->React.string}>
-              <RMWC.Avatar src={avatar2Url} size="large" interactive={true} />
-            </RMWC.Tooltip>
-            <RMWC.Tooltip content={"Bob"->React.string}>
-              <RMWC.Avatar src={avatar3Url} size="large" interactive={true} />
-            </RMWC.Tooltip>
-            <RMWC.Tooltip content={"4 more"->React.string}>
-              <RMWC.AvatarCount size="large" value={4} overflow={true} interactive={true} />
-            </RMWC.Tooltip>
-          </RMWC.AvatarGroup>
+          <AvatarGroup dense={true}>
+            <Tooltip content={"Jane Doe"->React.string}>
+              <Avatar src={avatar1Url} size="large" interactive={true} />
+            </Tooltip>
+            <Tooltip content={"John Doe"->React.string}>
+              <Avatar src={avatar2Url} size="large" interactive={true} />
+            </Tooltip>
+            <Tooltip content={"Bob"->React.string}>
+              <Avatar src={avatar3Url} size="large" interactive={true} />
+            </Tooltip>
+            <Tooltip content={"4 more"->React.string}>
+              <AvatarCount size="large" value={4} overflow={true} interactive={true} />
+            </Tooltip>
+          </AvatarGroup>
         </div>
-      </RMWC.Card>
+      </Card>
     </div>
   </>
 }

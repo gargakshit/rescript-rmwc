@@ -51,36 +51,32 @@ var Tooltip = {};
 
 var TextField = {};
 
-var RMWC = {
-  Portal: Portal,
-  Button: Button,
-  Card: Card,
-  CardPrimaryAction: CardPrimaryAction,
-  CardMedia: CardMedia,
-  CardMediaContent: CardMediaContent,
-  CardActions: CardActions,
-  CardActionButtons: CardActionButtons,
-  CardActionIcons: CardActionIcons,
-  CardActionIcon: CardActionIcon,
-  CardActionButton: CardActionButton,
-  Typography: Typography,
-  Dialog: Dialog,
-  DialogTitle: DialogTitle,
-  DialogContent: DialogContent,
-  DialogActions: DialogActions,
-  DialogButton: DialogButton,
-  Avatar: Avatar,
-  AvatarGroup: AvatarGroup,
-  AvatarCount: AvatarCount,
-  Icon: Icon,
-  LinearProgress: LinearProgress,
-  CircularProgress: CircularProgress,
-  Tooltip: Tooltip,
-  TextField: TextField
-};
-
 export {
-  RMWC ,
+  Portal ,
+  Button ,
+  Card ,
+  CardPrimaryAction ,
+  CardMedia ,
+  CardMediaContent ,
+  CardActions ,
+  CardActionButtons ,
+  CardActionIcons ,
+  CardActionIcon ,
+  CardActionButton ,
+  Typography ,
+  Dialog ,
+  DialogTitle ,
+  DialogContent ,
+  DialogActions ,
+  DialogButton ,
+  Avatar ,
+  AvatarGroup ,
+  AvatarCount ,
+  Icon ,
+  LinearProgress ,
+  CircularProgress ,
+  Tooltip ,
+  TextField ,
   
 }
 /* No side effect */
