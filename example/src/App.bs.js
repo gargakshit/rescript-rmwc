@@ -5,6 +5,7 @@ import * as Card from "@rmwc/card";
 import * as Icon from "@rmwc/icon";
 import * as Avatar from "@rmwc/avatar";
 import * as Button from "@rmwc/button";
+import * as Tooltip from "@rmwc/tooltip";
 import * as Typography from "@rmwc/typography";
 import * as LinearProgress from "@rmwc/linear-progress";
 import * as CircularProgress from "@rmwc/circular-progress";
@@ -62,16 +63,25 @@ function App(Props) {
                             })), React.createElement(Card.CardActionIcons, {
                           children: null
                         }, React.createElement(Card.CardActionIcon, {
-                              icon: React.createElement(Icon.Icon, {
-                                    icon: "favorite_border"
+                              icon: React.createElement(Tooltip.Tooltip, {
+                                    children: React.createElement(Icon.Icon, {
+                                          icon: "favorite_border"
+                                        }),
+                                    content: "Like"
                                   })
                             }), React.createElement(Card.CardActionIcon, {
-                              icon: React.createElement(Icon.Icon, {
-                                    icon: "share"
+                              icon: React.createElement(Tooltip.Tooltip, {
+                                    children: React.createElement(Icon.Icon, {
+                                          icon: "share"
+                                        }),
+                                    content: "Share"
                                   })
                             }), React.createElement(Card.CardActionIcon, {
-                              icon: React.createElement(Icon.Icon, {
-                                    icon: "more_vert"
+                              icon: React.createElement(Tooltip.Tooltip, {
+                                    children: React.createElement(Icon.Icon, {
+                                          icon: "more_vert"
+                                        }),
+                                    content: "More Actions"
                                   })
                             })))), React.createElement(Card.Card, {
                   children: React.createElement("div", {
@@ -151,36 +161,43 @@ function App(Props) {
                     width: "21rem"
                   }
                 }), React.createElement(Card.Card, {
-                  children: React.createElement(Card.CardPrimaryAction, {
-                        children: React.createElement("div", {
-                              style: {
-                                padding: "0.5rem 1rem"
-                              }
-                            }, React.createElement(Avatar.AvatarGroup, {
-                                  children: null,
-                                  dense: true
-                                }, React.createElement(Avatar.Avatar, {
+                  children: React.createElement("div", {
+                        style: {
+                          padding: "0.5rem 1rem"
+                        }
+                      }, React.createElement(Avatar.AvatarGroup, {
+                            children: null,
+                            dense: true
+                          }, React.createElement(Tooltip.Tooltip, {
+                                children: React.createElement(Avatar.Avatar, {
                                       interactive: true,
-                                      name: "Jane Doe",
                                       size: "large",
                                       src: "https://images.unsplash.com/photo-1613521527519-4a3b26610e8f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=256&ixid=MXwxfDB8MXxyYW5kb218fHx8fHx8fA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=256"
-                                    }), React.createElement(Avatar.Avatar, {
+                                    }),
+                                content: "Jane Doe"
+                              }), React.createElement(Tooltip.Tooltip, {
+                                children: React.createElement(Avatar.Avatar, {
                                       interactive: true,
-                                      name: "John Doe",
                                       size: "large",
                                       src: "https://images.unsplash.com/photo-1613553242301-529fe5529bf7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=256&ixid=MXwxfDB8MXxyYW5kb218fHx8fHx8fA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=256"
-                                    }), React.createElement(Avatar.Avatar, {
+                                    }),
+                                content: "John Doe"
+                              }), React.createElement(Tooltip.Tooltip, {
+                                children: React.createElement(Avatar.Avatar, {
                                       interactive: true,
-                                      name: "Bob",
                                       size: "large",
                                       src: "https://images.unsplash.com/photo-1613508603136-79e2c4a80ffe?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=256&ixid=MXwxfDB8MXxyYW5kb218fHx8fHx8fA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=256"
-                                    }), React.createElement(Avatar.AvatarCount, {
+                                    }),
+                                content: "Bob"
+                              }), React.createElement(Tooltip.Tooltip, {
+                                children: React.createElement(Avatar.AvatarCount, {
                                       interactive: true,
                                       overflow: true,
                                       size: "large",
                                       value: 4
-                                    })))
-                      }),
+                                    }),
+                                content: "4 more"
+                              }))),
                   outlined: true,
                   style: {
                     marginLeft: "2rem"

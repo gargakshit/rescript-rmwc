@@ -198,4 +198,20 @@ module RMWC = {
       ~size: option<string>=?,
     ) => React.element = "CircularProgress"
   }
+
+  module Tooltip = {
+    @module("@rmwc/tooltip") @react.component
+    external make: (
+      ~activateOn: option<array<string>>=?,
+      ~align: option<string>=?,
+      ~children: React.element,
+      ~className: option<string>=?,
+      ~content: React.element,
+      ~enterDelay: option<float>=?,
+      ~leaveDelay: option<float>=?,
+      ~\"open": option<bool>=?,
+      ~showArrow: option<bool>=?,
+      ~style: option<ReactDOM.style>=?,
+    ) => React.element = "Tooltip"
+  }
 }

@@ -37,6 +37,8 @@ var LinearProgress = {};
 
 var CircularProgress = {};
 
+var Tooltip = {};
+
 var RMWC = {
   Portal: Portal,
   Button: Button,
@@ -55,7 +57,8 @@ var RMWC = {
   AvatarCount: AvatarCount,
   Icon: Icon,
   LinearProgress: LinearProgress,
-  CircularProgress: CircularProgress
+  CircularProgress: CircularProgress,
+  Tooltip: Tooltip
 };
 
 export {

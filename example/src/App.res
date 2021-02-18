@@ -44,9 +44,21 @@ let make = () => {
           <RMWC.CardActionButton> {"Bookmark"->React.string} </RMWC.CardActionButton>
         </RMWC.CardActionButtons>
         <RMWC.CardActionIcons>
-          <RMWC.CardActionIcon icon={<RMWC.Icon icon="favorite_border" />} />
-          <RMWC.CardActionIcon icon={<RMWC.Icon icon="share" />} />
-          <RMWC.CardActionIcon icon={<RMWC.Icon icon="more_vert" />} />
+          <RMWC.CardActionIcon
+            icon={<RMWC.Tooltip content={"Like"->React.string}>
+              <RMWC.Icon icon="favorite_border" />
+            </RMWC.Tooltip>}
+          />
+          <RMWC.CardActionIcon
+            icon={<RMWC.Tooltip content={"Share"->React.string}>
+              <RMWC.Icon icon="share" />
+            </RMWC.Tooltip>}
+          />
+          <RMWC.CardActionIcon
+            icon={<RMWC.Tooltip content={"More Actions"->React.string}>
+              <RMWC.Icon icon="more_vert" />
+            </RMWC.Tooltip>}
+          />
         </RMWC.CardActionIcons>
       </RMWC.CardActions>
     </RMWC.Card>
@@ -88,16 +100,22 @@ let make = () => {
       </div>
     </RMWC.Card>
     <RMWC.Card style={ReactDOM.Style.make(~marginLeft="2rem", ())} outlined={true}>
-      <RMWC.CardPrimaryAction>
-        <div style={ReactDOM.Style.make(~padding="0.5rem 1rem", ())}>
-          <RMWC.AvatarGroup dense={true}>
-            <RMWC.Avatar src={avatar1Url} size="large" name="Jane Doe" interactive={true} />
-            <RMWC.Avatar src={avatar2Url} size="large" name="John Doe" interactive={true} />
-            <RMWC.Avatar src={avatar3Url} size="large" name="Bob" interactive={true} />
+      <div style={ReactDOM.Style.make(~padding="0.5rem 1rem", ())}>
+        <RMWC.AvatarGroup dense={true}>
+          <RMWC.Tooltip content={"Jane Doe"->React.string}>
+            <RMWC.Avatar src={avatar1Url} size="large" interactive={true} />
+          </RMWC.Tooltip>
+          <RMWC.Tooltip content={"John Doe"->React.string}>
+            <RMWC.Avatar src={avatar2Url} size="large" interactive={true} />
+          </RMWC.Tooltip>
+          <RMWC.Tooltip content={"Bob"->React.string}>
+            <RMWC.Avatar src={avatar3Url} size="large" interactive={true} />
+          </RMWC.Tooltip>
+          <RMWC.Tooltip content={"4 more"->React.string}>
             <RMWC.AvatarCount size="large" value={4} overflow={true} interactive={true} />
-          </RMWC.AvatarGroup>
-        </div>
-      </RMWC.CardPrimaryAction>
+          </RMWC.Tooltip>
+        </RMWC.AvatarGroup>
+      </div>
     </RMWC.Card>
   </div>
 }
