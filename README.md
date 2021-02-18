@@ -33,4 +33,4 @@ To run the example
 
 ### Screenshot
 
-![card](./screenshots/card.png)
+![card1](./screenshots/card.png)
