@@ -19,6 +19,8 @@ var CardActionButtons = {};
 
 var CardActionIcons = {};
 
+var CardActionIcon = {};
+
 var CardActionButton = {};
 
 var Typography = {};
@@ -28,6 +30,8 @@ var Avatar = {};
 var AvatarGroup = {};
 
 var AvatarCount = {};
+
+var Icon = {};
 
 var RMWC = {
   Portal: Portal,
@@ -39,11 +43,13 @@ var RMWC = {
   CardActions: CardActions,
   CardActionButtons: CardActionButtons,
   CardActionIcons: CardActionIcons,
+  CardActionIcon: CardActionIcon,
   CardActionButton: CardActionButton,
   Typography: Typography,
   Avatar: Avatar,
   AvatarGroup: AvatarGroup,
-  AvatarCount: AvatarCount
+  AvatarCount: AvatarCount,
+  Icon: Icon
 };
 
 export {

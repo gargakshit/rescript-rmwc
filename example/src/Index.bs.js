@@ -11,6 +11,7 @@ import "@rmwc/button/styles";
 import "@rmwc/card/styles";
 import "@rmwc/typography/styles";
 import "@rmwc/avatar/styles";
+import "@rmwc/icon/styles";
 ;
 
 var root = document.querySelector("#root");

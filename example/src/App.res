@@ -43,6 +43,11 @@ let make = () => {
           <RMWC.CardActionButton> {"Read"->React.string} </RMWC.CardActionButton>
           <RMWC.CardActionButton> {"Bookmark"->React.string} </RMWC.CardActionButton>
         </RMWC.CardActionButtons>
+        <RMWC.CardActionIcons>
+          <RMWC.CardActionIcon icon={<RMWC.Icon icon="favorite_border" />} />
+          <RMWC.CardActionIcon icon={<RMWC.Icon icon="share" />} />
+          <RMWC.CardActionIcon icon={<RMWC.Icon icon="more_vert" />} />
+        </RMWC.CardActionIcons>
       </RMWC.CardActions>
     </RMWC.Card>
     <RMWC.Card style={ReactDOM.Style.make(~marginLeft="2rem", ())} outlined={true}>

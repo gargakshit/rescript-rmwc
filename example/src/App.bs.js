@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import * as Card from "@rmwc/card";
+import * as Icon from "@rmwc/icon";
 import * as Avatar from "@rmwc/avatar";
 import * as Typography from "@rmwc/typography";
 
@@ -47,14 +48,28 @@ function App(Props) {
                               tag: "div",
                               theme: "textSecondaryOnBackground"
                             }))), React.createElement(Card.CardActions, {
-                      children: React.createElement(Card.CardActionButtons, {
-                            children: null
-                          }, React.createElement(Card.CardActionButton, {
-                                children: "Read"
-                              }), React.createElement(Card.CardActionButton, {
-                                children: "Bookmark"
-                              }))
-                    })), React.createElement(Card.Card, {
+                      children: null
+                    }, React.createElement(Card.CardActionButtons, {
+                          children: null
+                        }, React.createElement(Card.CardActionButton, {
+                              children: "Read"
+                            }), React.createElement(Card.CardActionButton, {
+                              children: "Bookmark"
+                            })), React.createElement(Card.CardActionIcons, {
+                          children: null
+                        }, React.createElement(Card.CardActionIcon, {
+                              icon: React.createElement(Icon.Icon, {
+                                    icon: "favorite_border"
+                                  })
+                            }), React.createElement(Card.CardActionIcon, {
+                              icon: React.createElement(Icon.Icon, {
+                                    icon: "share"
+                                  })
+                            }), React.createElement(Card.CardActionIcon, {
+                              icon: React.createElement(Icon.Icon, {
+                                    icon: "more_vert"
+                                  })
+                            })))), React.createElement(Card.Card, {
                   children: React.createElement(Card.CardPrimaryAction, {
                         children: React.createElement("div", {
                               style: {

@@ -11,11 +11,13 @@ module RMWC = {
       ~danger: option<bool>=?,
       ~dense: option<bool>=?,
       ~disabled: option<bool>=?,
+      ~icon: option<React.element>=?,
       ~label: option<string>=?,
       ~onClick: option<unit => unit>=?,
       ~outlined: option<bool>=?,
       ~raised: option<bool>=?,
       ~style: option<ReactDOM.style>=?,
+      ~trailingIcon: option<React.element>=?,
       ~unelevated: option<bool>=?,
     ) => React.element = "Button"
   }
@@ -80,15 +82,17 @@ module RMWC = {
     ) => React.element = "CardActionIcons"
   }
 
-  // module CardActionIcon = {
-  //   @module("@rmwc/card") @react.component
-  //   external make: (
-  //     ~checked: option<bool>=?,
-  //     ~children: option<React.element>=?,
-  //     ~disabled: option<bool>=?,
-  //     ~style: option<ReactDOM.style>=?,
-  //   ) => React.element = "CardActionIcon"
-  // }
+  module CardActionIcon = {
+    @module("@rmwc/card") @react.component
+    external make: (
+      ~checked: option<bool>=?,
+      ~children: option<React.element>=?,
+      ~disabled: option<bool>=?,
+      ~icon: option<React.element>=?,
+      ~label: option<string>=?,
+      ~style: option<ReactDOM.style>=?,
+    ) => React.element = "CardActionIcon"
+  }
 
   module CardActionButton = {
     @module("@rmwc/card") @react.component
@@ -97,11 +101,13 @@ module RMWC = {
       ~danger: option<bool>=?,
       ~dense: option<bool>=?,
       ~disabled: option<bool>=?,
+      ~icon: option<React.element>=?,
       ~label: option<string>=?,
       ~onClick: option<unit => unit>=?,
       ~outlined: option<bool>=?,
       ~raised: option<bool>=?,
       ~style: option<ReactDOM.style>=?,
+      ~trailingIcon: option<React.element>=?,
       ~unelevated: option<bool>=?,
     ) => React.element = "CardActionButton"
   }
@@ -162,5 +168,14 @@ module RMWC = {
       ~square: option<bool>=?,
       ~value: int,
     ) => React.element = "AvatarCount"
+  }
+
+  module Icon = {
+    @module("@rmwc/icon") @react.component
+    external make: (
+      ~children: option<React.element>=?,
+      ~icon: string,
+      ~style: option<ReactDOM.style>=?,
+    ) => React.element = "Icon"
   }
 }
