@@ -212,6 +212,16 @@
   resolved "https://registry.yarnpkg.com/@rescript/react/-/react-0.10.1.tgz#ddce66ba664a104354d559c350ca4ebf17ab5a26"
   integrity sha512-5eIfGnV1yhjv03ktK6fQ6iEfsZKXKXXrq5hx4+ngEY4R/RU8o/oH9ne375m9RJMugV/jsE8hMoEeSSg2YQy3Ag==
 
+"@rmwc/avatar@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/avatar/-/avatar-6.1.4.tgz#69b4ec6e61a237c7fceaa3f24aa2989d35527426"
+  integrity sha512-fKG8dukP7USaFY2xtjyITRn8GLecrEwrFOuNjjGxcNKQ7MKrJAzRlqVbo9NCE6si8+Et4Vs6Ex64fEPWpZb14w==
+  dependencies:
+    "@rmwc/base" "^6.1.4"
+    "@rmwc/icon" "^6.1.4"
+    "@rmwc/ripple" "^6.1.4"
+    "@rmwc/types" "^6.0.5"
+
 "@rmwc/base@^6.1.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@rmwc/base/-/base-6.1.4.tgz#0e6a132eee28e0f0e1dd409fc917b8b035754a02"

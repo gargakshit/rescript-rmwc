@@ -23,6 +23,12 @@ var CardActionButton = {};
 
 var Typography = {};
 
+var Avatar = {};
+
+var AvatarGroup = {};
+
+var AvatarCount = {};
+
 var RMWC = {
   Portal: Portal,
   Button: Button,
@@ -34,7 +40,10 @@ var RMWC = {
   CardActionButtons: CardActionButtons,
   CardActionIcons: CardActionIcons,
   CardActionButton: CardActionButton,
-  Typography: Typography
+  Typography: Typography,
+  Avatar: Avatar,
+  AvatarGroup: AvatarGroup,
+  AvatarCount: AvatarCount
 };
 
 export {

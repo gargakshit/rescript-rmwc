@@ -127,4 +127,40 @@ module RMWC = {
   //     ~\"open": option<bool>=?,
   //   ) => React.element = "Dialog"
   // }
+
+  module Avatar = {
+    @module("@rmwc/avatar") @react.component
+    external make: (
+      ~children: option<React.element>=?,
+      ~contain: option<bool>=?,
+      ~interactive: option<bool>=?,
+      ~name: option<string>=?,
+      ~size: option<string>=?,
+      ~style: option<ReactDOM.style>=?,
+      ~square: option<bool>=?,
+      ~src: option<string>=?,
+    ) => React.element = "Avatar"
+  }
+
+  module AvatarGroup = {
+    @module("@rmwc/avatar") @react.component
+    external make: (
+      ~children: option<React.element>=?,
+      ~dense: option<bool>=?,
+      ~style: option<ReactDOM.style>=?,
+    ) => React.element = "AvatarGroup"
+  }
+
+  module AvatarCount = {
+    @module("@rmwc/avatar") @react.component
+    external make: (
+      ~children: option<React.element>=?,
+      ~interactive: option<bool>=?,
+      ~overflow: option<bool>=?,
+      ~size: option<string>=?,
+      ~style: option<ReactDOM.style>=?,
+      ~square: option<bool>=?,
+      ~value: int,
+    ) => React.element = "AvatarCount"
+  }
 }

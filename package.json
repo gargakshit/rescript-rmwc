@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@rescript/react": "^0.10.1",
+    "@rmwc/avatar": "^6.1.4",
     "@rmwc/base": "^6.1.4",
     "@rmwc/button": "^6.1.4",
     "@rmwc/card": "^6.1.4",

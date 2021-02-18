@@ -6,9 +6,11 @@ import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
 import * as App$RescriptRmwcExample from "./App.bs.js";
 
 import "./index.css";
+
 import "@rmwc/button/styles";
 import "@rmwc/card/styles";
 import "@rmwc/typography/styles";
+import "@rmwc/avatar/styles";
 ;
 
 var root = document.querySelector("#root");
