@@ -7,8 +7,11 @@ WIP bindings to [RMWC](https://rmwc.io) for ReScript.
 - Button
 - Card
 - Typography
-
-Note: Icons are still missing
+- Tooltips
+- Avatar
+- Icons
+- Linear Progress
+- Circular Progress
 
 ### How to use
 
