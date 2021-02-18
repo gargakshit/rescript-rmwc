@@ -39,6 +39,8 @@ var CircularProgress = {};
 
 var Tooltip = {};
 
+var TextField = {};
+
 var RMWC = {
   Portal: Portal,
   Button: Button,
@@ -58,7 +60,8 @@ var RMWC = {
   Icon: Icon,
   LinearProgress: LinearProgress,
   CircularProgress: CircularProgress,
-  Tooltip: Tooltip
+  Tooltip: Tooltip,
+  TextField: TextField
 };
 
 export {

@@ -90,6 +90,7 @@ module RMWC = {
       ~disabled: option<bool>=?,
       ~icon: option<React.element>=?,
       ~label: option<string>=?,
+      ~onClick: option<unit => unit>=?,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "CardActionIcon"
   }
@@ -213,5 +214,29 @@ module RMWC = {
       ~showArrow: option<bool>=?,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "Tooltip"
+  }
+
+  module TextField = {
+    @module("@rmwc/textfield") @react.component
+    external make: (
+      ~align: option<string>=?,
+      ~characterCount: option<bool>=?,
+      ~className: option<string>=?,
+      ~disabled: option<bool>=?,
+      ~floatLabel: option<bool>=?,
+      ~fullWidth: option<bool>=?,
+      ~helpText: option<React.element>=?,
+      ~icon: option<React.element>=?,
+      ~invalid: option<bool>=?,
+      ~label: option<React.element>=?,
+      ~onChange: option<Types.textFieldChangeEvent => unit>=?,
+      ~outlined: option<bool>=?,
+      ~required: option<bool>=?,
+      ~style: option<ReactDOM.style>=?,
+      ~textArea: option<bool>=?,
+      ~trailingIcon: option<React.element>=?,
+      ~\"type": option<string>=?,
+      ~value: option<string>=?,
+    ) => React.element = "TextField"
   }
 }

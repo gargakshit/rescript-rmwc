@@ -8,6 +8,8 @@ let make = () => {
   let avatar2Url = "https://images.unsplash.com/photo-1613553242301-529fe5529bf7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=256&ixid=MXwxfDB8MXxyYW5kb218fHx8fHx8fA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=256"
   let avatar3Url = "https://images.unsplash.com/photo-1613508603136-79e2c4a80ffe?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=256&ixid=MXwxfDB8MXxyYW5kb218fHx8fHx8fA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=256"
 
+  let (liked, setLiked) = React.useState(_ => false)
+
   <div
     style={ReactDOM.Style.make(
       ~display="flex",
@@ -45,8 +47,9 @@ let make = () => {
         </RMWC.CardActionButtons>
         <RMWC.CardActionIcons>
           <RMWC.CardActionIcon
-            icon={<RMWC.Tooltip content={"Like"->React.string}>
-              <RMWC.Icon icon="favorite_border" />
+            onClick={() => setLiked(v => !v)}
+            icon={<RMWC.Tooltip content={(liked ? "Unlike" : "Like")->React.string}>
+              <RMWC.Icon icon={liked ? "favorite" : "favorite_border"} />
             </RMWC.Tooltip>}
           />
           <RMWC.CardActionIcon
@@ -97,6 +100,16 @@ let make = () => {
           </RMWC.Button>
         </div>
         <div style={ReactDOM.Style.make(~marginTop="16px", ())} />
+      </div>
+    </RMWC.Card>
+    <RMWC.Card style={ReactDOM.Style.make(~marginLeft="2rem", ())} outlined={true}>
+      <div
+        style={ReactDOM.Style.make(~padding="1rem", ~display="flex", ~flexDirection="column", ())}>
+        <RMWC.TextField outlined={true} label={"Enter your name"->React.string} fullWidth={true} />
+        <div style={ReactDOM.Style.make(~marginTop="16px", ())} />
+        <RMWC.Button raised={true} icon={<RMWC.Icon icon="chat" />}>
+          {"Greet"->React.string}
+        </RMWC.Button>
       </div>
     </RMWC.Card>
     <RMWC.Card style={ReactDOM.Style.make(~marginLeft="2rem", ())} outlined={true}>
