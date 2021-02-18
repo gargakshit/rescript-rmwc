@@ -8,6 +8,7 @@ module RMWC = {
     @module("@rmwc/button") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~danger: option<bool>=?,
       ~dense: option<bool>=?,
       ~disabled: option<bool>=?,
@@ -26,6 +27,7 @@ module RMWC = {
     @module("@rmwc/card") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~outlined: option<bool>=?,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "Card"
@@ -35,6 +37,7 @@ module RMWC = {
     @module("@rmwc/card") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "CardPrimaryAction"
   }
@@ -43,6 +46,7 @@ module RMWC = {
     @module("@rmwc/card") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~sixteenByNine: option<bool>=?,
       ~style: option<ReactDOM.style>=?,
       ~square: option<bool>=?,
@@ -53,6 +57,7 @@ module RMWC = {
     @module("@rmwc/card") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "CardMediaContent"
   }
@@ -61,6 +66,7 @@ module RMWC = {
     @module("@rmwc/card") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~fullBleed: option<bool>=?,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "CardActions"
@@ -70,6 +76,7 @@ module RMWC = {
     @module("@rmwc/card") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "CardActionButtons"
   }
@@ -78,6 +85,7 @@ module RMWC = {
     @module("@rmwc/card") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "CardActionIcons"
   }
@@ -87,6 +95,7 @@ module RMWC = {
     external make: (
       ~checked: option<bool>=?,
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~disabled: option<bool>=?,
       ~icon: option<React.element>=?,
       ~label: option<string>=?,
@@ -99,6 +108,7 @@ module RMWC = {
     @module("@rmwc/card") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~danger: option<bool>=?,
       ~dense: option<bool>=?,
       ~disabled: option<bool>=?,
@@ -117,6 +127,7 @@ module RMWC = {
     @module("@rmwc/typography") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~use: string,
       ~style: option<ReactDOM.style>=?,
       ~tag: option<string>=?,
@@ -124,21 +135,75 @@ module RMWC = {
     ) => React.element = "Typography"
   }
 
-  // module Dialog = {
-  //   @module("@rmwc/dialog") external onCloseEvent: 'whatever = "DialogOnCloseEventT"
+  module Dialog = {
+    @module("@rmwc/dialog") @react.component
+    external make: (
+      ~children: option<React.element>=?,
+      ~className: option<string>=?,
+      ~onClose: option<Types.Dialog.onClose => unit>=?,
+      ~onClosed: option<Types.Dialog.onClose => unit>=?,
+      ~onOpen: option<unit => unit>=?,
+      ~onOpened: option<unit => unit>=?,
+      ~\"open": option<bool>=?,
+      ~preventOutsideDismiss: option<bool>=?,
+      ~renderToPortal: option<bool>=?,
+      ~style: option<ReactDOM.style>=?,
+    ) => React.element = "Dialog"
+  }
 
-  //   @module("@rmwc/dialog") @react.component
-  //   external make: (
-  //     ~onClose: option<onCloseEvent => unit>=?,
-  //     ~onClosed: option<onCloseEvent => unit>=?,
-  //     ~\"open": option<bool>=?,
-  //   ) => React.element = "Dialog"
-  // }
+  module DialogTitle = {
+    @module("@rmwc/dialog") @react.component
+    external make: (
+      ~children: option<React.element>=?,
+      ~className: option<string>=?,
+      ~style: option<ReactDOM.style>=?,
+    ) => React.element = "DialogTitle"
+  }
+
+  module DialogContent = {
+    @module("@rmwc/dialog") @react.component
+    external make: (
+      ~children: option<React.element>=?,
+      ~className: option<string>=?,
+      ~style: option<ReactDOM.style>=?,
+    ) => React.element = "DialogContent"
+  }
+
+  module DialogActions = {
+    @module("@rmwc/dialog") @react.component
+    external make: (
+      ~children: option<React.element>=?,
+      ~className: option<string>=?,
+      ~style: option<ReactDOM.style>=?,
+    ) => React.element = "DialogActions"
+  }
+
+  module DialogButton = {
+    @module("@rmwc/dialog") @react.component
+    external make: (
+      ~action: option<string>=?,
+      ~children: option<React.element>=?,
+      ~className: option<string>=?,
+      ~danger: option<bool>=?,
+      ~dense: option<bool>=?,
+      ~disabled: option<bool>=?,
+      ~icon: option<React.element>=?,
+      ~isDefaultAction: option<bool>=?,
+      ~label: option<string>=?,
+      ~onClick: option<unit => unit>=?,
+      ~outlined: option<bool>=?,
+      ~raised: option<bool>=?,
+      ~style: option<ReactDOM.style>=?,
+      ~trailingIcon: option<React.element>=?,
+      ~unelevated: option<bool>=?,
+    ) => React.element = "DialogButton"
+  }
 
   module Avatar = {
     @module("@rmwc/avatar") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~contain: option<bool>=?,
       ~interactive: option<bool>=?,
       ~name: option<string>=?,
@@ -153,6 +218,7 @@ module RMWC = {
     @module("@rmwc/avatar") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~dense: option<bool>=?,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "AvatarGroup"
@@ -162,6 +228,7 @@ module RMWC = {
     @module("@rmwc/avatar") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~interactive: option<bool>=?,
       ~overflow: option<bool>=?,
       ~size: option<string>=?,
@@ -175,6 +242,7 @@ module RMWC = {
     @module("@rmwc/icon") @react.component
     external make: (
       ~children: option<React.element>=?,
+      ~className: option<string>=?,
       ~icon: string,
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "Icon"
@@ -183,20 +251,24 @@ module RMWC = {
   module LinearProgress = {
     @module("@rmwc/linear-progress") @react.component
     external make: (
+      ~className: option<string>=?,
       ~buffer: option<float>=?,
       ~closed: option<bool>=?,
       ~progress: option<float>=?,
       ~reversed: option<bool>=?,
+      ~style: option<ReactDOM.style>=?,
     ) => React.element = "LinearProgress"
   }
 
   module CircularProgress = {
     @module("@rmwc/circular-progress") @react.component
     external make: (
+      ~className: option<string>=?,
       ~min: option<float>=?,
       ~max: option<float>=?,
       ~progress: option<float>=?,
       ~size: option<string>=?,
+      ~style: option<ReactDOM.style>=?,
     ) => React.element = "CircularProgress"
   }
 
@@ -229,7 +301,7 @@ module RMWC = {
       ~icon: option<React.element>=?,
       ~invalid: option<bool>=?,
       ~label: option<React.element>=?,
-      ~onChange: option<Types.textFieldChangeEvent => unit>=?,
+      ~onChange: option<Types.TextField.changeEvent => unit>=?,
       ~outlined: option<bool>=?,
       ~required: option<bool>=?,
       ~style: option<ReactDOM.style>=?,

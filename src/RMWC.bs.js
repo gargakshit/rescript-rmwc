@@ -25,6 +25,16 @@ var CardActionButton = {};
 
 var Typography = {};
 
+var Dialog = {};
+
+var DialogTitle = {};
+
+var DialogContent = {};
+
+var DialogActions = {};
+
+var DialogButton = {};
+
 var Avatar = {};
 
 var AvatarGroup = {};
@@ -54,6 +64,11 @@ var RMWC = {
   CardActionIcon: CardActionIcon,
   CardActionButton: CardActionButton,
   Typography: Typography,
+  Dialog: Dialog,
+  DialogTitle: DialogTitle,
+  DialogContent: DialogContent,
+  DialogActions: DialogActions,
+  DialogButton: DialogButton,
   Avatar: Avatar,
   AvatarGroup: AvatarGroup,
   AvatarCount: AvatarCount,

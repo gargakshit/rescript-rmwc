@@ -10,6 +10,7 @@ import "@rmwc/circular-progress/styles";
 import "@rmwc/linear-progress/styles";
 import "@rmwc/tooltip/styles";
 import "@rmwc/textfield/styles";
+import "@rmwc/dialog/styles";
 `)
 
 let root = ReactDOM.querySelector("#root")

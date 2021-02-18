@@ -16,6 +16,7 @@ import "@rmwc/circular-progress/styles";
 import "@rmwc/linear-progress/styles";
 import "@rmwc/tooltip/styles";
 import "@rmwc/textfield/styles";
+import "@rmwc/dialog/styles";
 ;
 
 var root = document.querySelector("#root");
