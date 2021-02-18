@@ -178,4 +178,24 @@ module RMWC = {
       ~style: option<ReactDOM.style>=?,
     ) => React.element = "Icon"
   }
+
+  module LinearProgress = {
+    @module("@rmwc/linear-progress") @react.component
+    external make: (
+      ~buffer: option<float>=?,
+      ~closed: option<bool>=?,
+      ~progress: option<float>=?,
+      ~reversed: option<bool>=?,
+    ) => React.element = "LinearProgress"
+  }
+
+  module CircularProgress = {
+    @module("@rmwc/circular-progress") @react.component
+    external make: (
+      ~min: option<float>=?,
+      ~max: option<float>=?,
+      ~progress: option<float>=?,
+      ~size: option<string>=?,
+    ) => React.element = "CircularProgress"
+  }
 }

@@ -4,7 +4,10 @@ import * as React from "react";
 import * as Card from "@rmwc/card";
 import * as Icon from "@rmwc/icon";
 import * as Avatar from "@rmwc/avatar";
+import * as Button from "@rmwc/button";
 import * as Typography from "@rmwc/typography";
+import * as LinearProgress from "@rmwc/linear-progress";
+import * as CircularProgress from "@rmwc/circular-progress";
 
 function App(Props) {
   return React.createElement("div", {
@@ -16,6 +19,7 @@ function App(Props) {
               }
             }, React.createElement(Card.Card, {
                   children: null,
+                  outlined: true,
                   style: {
                     width: "21rem"
                   }
@@ -70,6 +74,83 @@ function App(Props) {
                                     icon: "more_vert"
                                   })
                             })))), React.createElement(Card.Card, {
+                  children: React.createElement("div", {
+                        style: {
+                          padding: "0rem 1rem"
+                        }
+                      }, React.createElement(Typography.Typography, {
+                            children: "Progress Indicators",
+                            use: "heading3",
+                            tag: "h3"
+                          }), React.createElement(Typography.Typography, {
+                            children: "Intermediate",
+                            use: "caption",
+                            tag: "span"
+                          }), React.createElement(LinearProgress.LinearProgress, {}), React.createElement("div", {
+                            style: {
+                              marginTop: "12px"
+                            }
+                          }), React.createElement(Typography.Typography, {
+                            children: "Default",
+                            use: "caption",
+                            tag: "span"
+                          }), React.createElement(LinearProgress.LinearProgress, {
+                            progress: 0.6
+                          }), React.createElement("div", {
+                            style: {
+                              marginTop: "12px"
+                            }
+                          }), React.createElement(Typography.Typography, {
+                            children: "Buffered",
+                            use: "caption",
+                            tag: "span"
+                          }), React.createElement(LinearProgress.LinearProgress, {
+                            buffer: 0.5,
+                            progress: 0.4
+                          }), React.createElement("div", {
+                            style: {
+                              marginTop: "12px"
+                            }
+                          }), React.createElement(Typography.Typography, {
+                            children: "Reversed",
+                            use: "caption",
+                            tag: "span"
+                          }), React.createElement(LinearProgress.LinearProgress, {
+                            progress: 0.2,
+                            reversed: true
+                          }), React.createElement("div", {
+                            style: {
+                              marginTop: "12px"
+                            }
+                          }), React.createElement(Typography.Typography, {
+                            children: "Circular Progress",
+                            use: "caption",
+                            tag: "span"
+                          }), React.createElement("div", {
+                            style: {
+                              display: "flex",
+                              width: "100%",
+                              alignItems: "center",
+                              justifyContent: "space-between"
+                            }
+                          }, React.createElement(CircularProgress.CircularProgress, {}), React.createElement(CircularProgress.CircularProgress, {
+                                progress: 0.6
+                              }), React.createElement(Button.Button, {
+                                children: "Loading Button",
+                                disabled: true,
+                                icon: React.createElement(CircularProgress.CircularProgress, {}),
+                                outlined: true
+                              })), React.createElement("div", {
+                            style: {
+                              marginTop: "16px"
+                            }
+                          })),
+                  outlined: true,
+                  style: {
+                    marginLeft: "2rem",
+                    width: "21rem"
+                  }
+                }), React.createElement(Card.Card, {
                   children: React.createElement(Card.CardPrimaryAction, {
                         children: React.createElement("div", {
                               style: {

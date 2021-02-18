@@ -12,6 +12,8 @@ import "@rmwc/card/styles";
 import "@rmwc/typography/styles";
 import "@rmwc/avatar/styles";
 import "@rmwc/icon/styles";
+import "@rmwc/circular-progress/styles";
+import "@rmwc/linear-progress/styles";
 ;
 
 var root = document.querySelector("#root");

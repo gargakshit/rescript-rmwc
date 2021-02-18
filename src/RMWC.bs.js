@@ -33,6 +33,10 @@ var AvatarCount = {};
 
 var Icon = {};
 
+var LinearProgress = {};
+
+var CircularProgress = {};
+
 var RMWC = {
   Portal: Portal,
   Button: Button,
@@ -49,7 +53,9 @@ var RMWC = {
   Avatar: Avatar,
   AvatarGroup: AvatarGroup,
   AvatarCount: AvatarCount,
-  Icon: Icon
+  Icon: Icon,
+  LinearProgress: LinearProgress,
+  CircularProgress: CircularProgress
 };
 
 export {

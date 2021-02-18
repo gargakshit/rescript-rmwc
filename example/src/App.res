@@ -16,7 +16,7 @@ let make = () => {
       ~height="100vh",
       (),
     )}>
-    <RMWC.Card style={ReactDOM.Style.make(~width="21rem", ())}>
+    <RMWC.Card style={ReactDOM.Style.make(~width="21rem", ())} outlined={true}>
       <RMWC.CardPrimaryAction>
         <RMWC.CardMedia
           sixteenByNine={true}
@@ -49,6 +49,43 @@ let make = () => {
           <RMWC.CardActionIcon icon={<RMWC.Icon icon="more_vert" />} />
         </RMWC.CardActionIcons>
       </RMWC.CardActions>
+    </RMWC.Card>
+    <RMWC.Card style={ReactDOM.Style.make(~marginLeft="2rem", ~width="21rem", ())} outlined={true}>
+      <div style={ReactDOM.Style.make(~padding="0rem 1rem", ())}>
+        <RMWC.Typography tag="h3" use="heading3">
+          {"Progress Indicators"->React.string}
+        </RMWC.Typography>
+        <RMWC.Typography tag="span" use="caption"> {"Intermediate"->React.string} </RMWC.Typography>
+        <RMWC.LinearProgress />
+        <div style={ReactDOM.Style.make(~marginTop="12px", ())} />
+        <RMWC.Typography tag="span" use="caption"> {"Default"->React.string} </RMWC.Typography>
+        <RMWC.LinearProgress progress={0.6} />
+        <div style={ReactDOM.Style.make(~marginTop="12px", ())} />
+        <RMWC.Typography tag="span" use="caption"> {"Buffered"->React.string} </RMWC.Typography>
+        <RMWC.LinearProgress progress={0.4} buffer={0.5} />
+        <div style={ReactDOM.Style.make(~marginTop="12px", ())} />
+        <RMWC.Typography tag="span" use="caption"> {"Reversed"->React.string} </RMWC.Typography>
+        <RMWC.LinearProgress progress={0.2} reversed={true} />
+        <div style={ReactDOM.Style.make(~marginTop="12px", ())} />
+        <RMWC.Typography tag="span" use="caption">
+          {"Circular Progress"->React.string}
+        </RMWC.Typography>
+        <div
+          style={ReactDOM.Style.make(
+            ~display="flex",
+            ~width="100%",
+            ~alignItems="center",
+            ~justifyContent="space-between",
+            (),
+          )}>
+          <RMWC.CircularProgress />
+          <RMWC.CircularProgress progress={0.6} />
+          <RMWC.Button disabled={true} outlined={true} icon={<RMWC.CircularProgress />}>
+            {"Loading Button"->React.string}
+          </RMWC.Button>
+        </div>
+        <div style={ReactDOM.Style.make(~marginTop="16px", ())} />
+      </div>
     </RMWC.Card>
     <RMWC.Card style={ReactDOM.Style.make(~marginLeft="2rem", ())} outlined={true}>
       <RMWC.CardPrimaryAction>
