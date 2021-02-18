@@ -12,6 +12,8 @@ WIP bindings to [RMWC](https://rmwc.io) for ReScript.
 - Icons
 - Linear Progress
 - Circular Progress
+- Text Field
+- Dialogs
 
 ### How to use
 
@@ -33,4 +35,4 @@ To run the example
 
 ### Screenshot
 
-![card1](./screenshots/card.png)
+![screenshot](./screenshots/screenshot_new.png)
