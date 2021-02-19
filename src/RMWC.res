@@ -16,7 +16,7 @@ module Button = {
     ~onClick: option<unit => unit>=?,
     ~outlined: option<bool>=?,
     ~raised: option<bool>=?,
-    ~ripple: option<Types.Button.rippleProp>,
+    ~ripple: option<Types.Button.rippleProp>=?,
     ~style: option<ReactDOM.style>=?,
     ~trailingIcon: option<React.element>=?,
     ~unelevated: option<bool>=?,
