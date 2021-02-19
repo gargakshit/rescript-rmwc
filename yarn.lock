@@ -385,6 +385,15 @@
     "@rmwc/ripple" "^6.1.4"
     "@rmwc/types" "^6.0.5"
 
+"@rmwc/theme@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/theme/-/theme-6.1.4.tgz#f74943078ac03acba046b5e50a98ff7d84f4ffc7"
+  integrity sha512-52dQNojbY7m5q64QyqU7bNaRyywm4FCrFJK3EVYjmoAyYcWrGAKVqA2cisPv29wpYOdfSC7f0fM93xlOR4MXUQ==
+  dependencies:
+    "@material/theme" "^5.1.0"
+    "@rmwc/base" "^6.1.4"
+    "@rmwc/types" "^6.0.5"
+
 "@rmwc/tooltip@^6.1.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@rmwc/tooltip/-/tooltip-6.1.4.tgz#f228c61145e4502c12aae64198ea70145ae3fb28"

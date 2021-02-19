@@ -310,3 +310,22 @@ module TextField = {
     ~value: option<string>=?,
   ) => React.element = "TextField"
 }
+
+module ThemeProvider = {
+  @module("@rmwc/theme") @react.component
+  external make: (
+    ~children: option<React.element>=?,
+    ~options: option<'whatever>=?,
+    ~style: option<ReactDOM.style>=?,
+    ~wrap: option<bool>=?,
+  ) => React.element = "ThemeProvider"
+}
+
+module Theme = {
+  @module("@rmwc/theme") @react.component
+  external make: (
+    ~children: option<React.element>=?,
+    ~use: option<string>=?,
+    ~wrap: option<bool>=?,
+  ) => React.element = "Theme"
+}

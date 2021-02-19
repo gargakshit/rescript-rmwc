@@ -51,6 +51,10 @@ var Tooltip = {};
 
 var TextField = {};
 
+var ThemeProvider = {};
+
+var Theme = {};
+
 export {
   Portal ,
   Button ,
@@ -77,6 +81,8 @@ export {
   CircularProgress ,
   Tooltip ,
   TextField ,
+  ThemeProvider ,
+  Theme ,
   
 }
 /* No side effect */
