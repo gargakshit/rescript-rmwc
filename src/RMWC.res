@@ -302,6 +302,7 @@ module TextField = {
     ~label: option<React.element>=?,
     ~onChange: option<Types.TextField.changeEvent => unit>=?,
     ~outlined: option<bool>=?,
+    ~placeholder: option<string>=?,
     ~required: option<bool>=?,
     ~style: option<ReactDOM.style>=?,
     ~textArea: option<bool>=?,
