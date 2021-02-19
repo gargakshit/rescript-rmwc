@@ -5,9 +5,12 @@ var Dialog = {};
 
 var TextField = {};
 
+var Button = {};
+
 export {
   Dialog ,
   TextField ,
+  Button ,
   
 }
 /* No side effect */

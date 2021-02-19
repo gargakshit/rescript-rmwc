@@ -16,6 +16,7 @@ module Button = {
     ~onClick: option<unit => unit>=?,
     ~outlined: option<bool>=?,
     ~raised: option<bool>=?,
+    ~ripple: option<Types.Button.rippleProp>,
     ~style: option<ReactDOM.style>=?,
     ~trailingIcon: option<React.element>=?,
     ~unelevated: option<bool>=?,
@@ -329,4 +330,15 @@ module Theme = {
     ~use: option<string>=?,
     ~wrap: option<bool>=?,
   ) => React.element = "Theme"
+}
+
+module Ripple = {
+  @module("@rmwc/ripple") @react.component
+  external make: (
+    ~accent: option<bool>,
+    ~disabled: option<bool>,
+    ~primary: option<bool>,
+    ~surface: option<bool>,
+    ~unbound: option<bool>,
+  ) => React.element = "Ripple"
 }

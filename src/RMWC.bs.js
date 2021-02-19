@@ -55,6 +55,8 @@ var ThemeProvider = {};
 
 var Theme = {};
 
+var Ripple = {};
+
 export {
   Portal ,
   Button ,
@@ -83,6 +85,7 @@ export {
   TextField ,
   ThemeProvider ,
   Theme ,
+  Ripple ,
   
 }
 /* No side effect */
