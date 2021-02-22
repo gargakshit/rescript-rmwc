@@ -24,7 +24,7 @@ module Button = {
 }
 
 module IconButton = {
-  @module("@rmwc/button") @react.component
+  @module("@rmwc/icon-button") @react.component
   external make: (
     ~checked: option<bool>=?,
     ~disabled: option<bool>=?,
