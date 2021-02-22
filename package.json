@@ -24,6 +24,7 @@
     "@rmwc/circular-progress": "^6.1.4",
     "@rmwc/dialog": "^6.1.4",
     "@rmwc/icon": "^6.1.4",
+    "@rmwc/icon-button": "^6.1.4",
     "@rmwc/linear-progress": "^6.1.4",
     "@rmwc/ripple": "^6.1.4",
     "@rmwc/textfield": "^6.1.4",

@@ -23,6 +23,18 @@ module Button = {
   ) => React.element = "Button"
 }
 
+module IconButton = {
+  @module("@rmwc/button") @react.component
+  external make: (
+    ~checked: option<bool>=?,
+    ~disabled: option<bool>=?,
+    ~icon: string,
+    ~label: option<string>=?,
+    ~onClick: option<unit => unit>=?,
+    ~ripple: option<Types.Button.rippleProp>=?,
+  ) => React.element = "IconButton"
+}
+
 module Card = {
   @module("@rmwc/card") @react.component
   external make: (

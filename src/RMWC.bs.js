@@ -5,6 +5,8 @@ var Portal = {};
 
 var Button = {};
 
+var IconButton = {};
+
 var Card = {};
 
 var CardPrimaryAction = {};
@@ -60,6 +62,7 @@ var Ripple = {};
 export {
   Portal ,
   Button ,
+  IconButton ,
   Card ,
   CardPrimaryAction ,
   CardMedia ,
