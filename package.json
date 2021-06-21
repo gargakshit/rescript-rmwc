@@ -2,9 +2,9 @@
   "name": "rescript-rmwc",
   "version": "0.0.1",
   "scripts": {
-    "build": "rescript -make-world",
-    "clean": "rescript -clean-world",
-    "start": "rescript -make-world -w"
+    "build": "rescript build",
+    "clean": "rescript clean",
+    "start": "rescript build -w"
   },
   "keywords": [
     "rescript"
