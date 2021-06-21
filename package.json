@@ -2,9 +2,9 @@
   "name": "rescript-rmwc",
   "version": "0.0.1",
   "scripts": {
-    "build": "bsb -make-world",
-    "clean": "bsb -clean-world",
-    "start": "bsb -make-world -w"
+    "build": "rescript -make-world",
+    "clean": "rescript -clean-world",
+    "start": "rescript -make-world -w"
   },
   "keywords": [
     "rescript"
@@ -12,8 +12,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^9.0.1",
-    "gentype": "^3.44.0"
+    "gentype": "^4.1.0",
+    "rescript": "^9.1.4"
   },
   "dependencies": {
     "@rescript/react": "^0.10.1",
