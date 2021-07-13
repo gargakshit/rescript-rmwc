@@ -339,7 +339,7 @@ module Theme = {
   @module("@rmwc/theme") @react.component
   external make: (
     ~children: option<React.element>=?,
-    ~use: option<string>=?,
+    ~use: option<array<string>>=?,
     ~wrap: option<bool>=?,
   ) => React.element = "Theme"
 }
