@@ -341,6 +341,7 @@ module Theme = {
     ~children: option<React.element>=?,
     ~use: option<array<string>>=?,
     ~wrap: option<bool>=?,
+    ~tag: option<string>=?,
   ) => React.element = "Theme"
 }
 
