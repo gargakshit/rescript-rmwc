@@ -23,6 +23,17 @@ module Button = {
   ) => React.element = "Button"
 }
 
+module Elevation = {
+  @module("@rmwc/elevation") @react.component
+  external make: (
+    ~children: option<React.element>=?,
+    ~className: option<string>=?,
+    ~z: option<int>=0,
+    ~transition: option<bool>=false,
+    ~style: option<ReactDOM.style>=?,
+  ) => React.element = "Elevation"
+}
+
 module IconButton = {
   @module("@rmwc/icon-button") @react.component
   external make: (
