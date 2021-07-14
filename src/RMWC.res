@@ -28,8 +28,8 @@ module Elevation = {
   external make: (
     ~children: option<React.element>=?,
     ~className: option<string>=?,
-    ~z: int=0,
-    ~transition: bool=false,
+    ~z: option<int>=?,
+    ~transition: option<bool>=?,
     ~style: option<ReactDOM.style>=?,
   ) => React.element = "Elevation"
 }
