@@ -31,6 +31,8 @@ module Elevation = {
     ~z: option<int>=?,
     ~transition: option<bool>=?,
     ~style: option<ReactDOM.style>=?,
+    ~onClick: option<unit => unit>=?,
+    ~onDoubleClick: option<unit => unit>=?,
   ) => React.element = "Elevation"
 }
 
