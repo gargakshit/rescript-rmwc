@@ -13,7 +13,7 @@ module Button = {
     ~disabled: option<bool>=?,
     ~icon: option<React.element>=?,
     ~label: option<string>=?,
-    ~onClick: option<unit => unit>=?,
+    ~onClick: option<ReactEvent.Mouse.t => unit>=?,
     ~outlined: option<bool>=?,
     ~raised: option<bool>=?,
     ~ripple: option<Types.Button.rippleProp>=?,
@@ -31,8 +31,8 @@ module Elevation = {
     ~z: option<int>=?,
     ~transition: option<bool>=?,
     ~style: option<ReactDOM.style>=?,
-    ~onClick: option<unit => unit>=?,
-    ~onDoubleClick: option<unit => unit>=?,
+    ~onClick: option<ReactEvent.Mouse.t => unit>=?,
+    ~onDoubleClick: option<ReactEvent.Mouse.t => unit>=?,
   ) => React.element = "Elevation"
 }
 
@@ -43,7 +43,7 @@ module IconButton = {
     ~disabled: option<bool>=?,
     ~icon: string,
     ~label: option<string>=?,
-    ~onClick: option<unit => unit>=?,
+    ~onClick: option<ReactEvent.Mouse.t => unit>=?,
     ~ripple: option<Types.Button.rippleProp>=?,
   ) => React.element = "IconButton"
 }
@@ -124,7 +124,7 @@ module CardActionIcon = {
     ~disabled: option<bool>=?,
     ~icon: option<React.element>=?,
     ~label: option<string>=?,
-    ~onClick: option<unit => unit>=?,
+    ~onClick: option<ReactEvent.Mouse.t => unit>=?,
     ~style: option<ReactDOM.style>=?,
   ) => React.element = "CardActionIcon"
 }
@@ -215,7 +215,7 @@ module DialogButton = {
     ~icon: option<React.element>=?,
     ~isDefaultAction: option<bool>=?,
     ~label: option<string>=?,
-    ~onClick: option<unit => unit>=?,
+    ~onClick: option<ReactEvent.Mouse.t => unit>=?,
     ~outlined: option<bool>=?,
     ~raised: option<bool>=?,
     ~style: option<ReactDOM.style>=?,
